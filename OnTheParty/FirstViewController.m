@@ -14,6 +14,8 @@
 
 @implementation FirstViewController
 
+@synthesize mapView;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
