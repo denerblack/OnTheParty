@@ -1,0 +1,3 @@
+[submodule "OnTheParty/AFNetworking"]
+	path = OnTheParty/AFNetworking
+	url = https://github.com/AFNetworking/AFNetworking
