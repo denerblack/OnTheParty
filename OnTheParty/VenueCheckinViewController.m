@@ -35,7 +35,8 @@
 }
 
 - (void)viewDidLoad
-{
+{   
+    [labelVenueName setText:self.venue.name];
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 }

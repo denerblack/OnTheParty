@@ -15,14 +15,14 @@
 @property (nonatomic,retain) NSString *name;
 @property (nonatomic,retain) NSString *contact;
 @property (nonatomic,retain) NSString *address;
-@property (nonatomic) double latitude;
-@property (nonatomic) double longitude;
+@property (nonatomic,retain) NSString *latitude;
+@property (nonatomic,retain) NSString *longitude;
 @property (nonatomic) double distance;
 @property (nonatomic,retain) NSString *country;
 @property (nonatomic,retain) NSArray *categories;
 
--(Venue*)initWithIdFoursquare:(NSString*) _idFoursquare name:(NSString*)_name contact:(NSString*)_contact latitude:(double)_latitude longitude:(double)_longitude country:(NSString*)_country categories:(NSArray*)_categories;
+-(Venue*)initWithIdFoursquare:(NSString*) _idFoursquare name:(NSString*)_name contact:(NSString*)_contact latitude:(NSString*)_latitude longitude:(NSString*)_longitude country:(NSString*)_country categories:(NSArray*)_categories;
 
--(Venue*)initWithIdFoursquare:(NSString*) _idFoursquare name:(NSString*)_name contact:(NSString*)_contact address:(NSString*)_address latitude:(double)_latitude longitude:(double)_longitude distance:(double)_distance country:(NSString*)_country categories:(NSArray*)_categories;
+-(Venue*)initWithIdFoursquare:(NSString*) _idFoursquare name:(NSString*)_name contact:(NSString*)_contact address:(NSString*)_address latitude:(NSString*)_latitude longitude:(NSString*)_longitude distance:(double)_distance country:(NSString*)_country categories:(NSArray*)_categories;
 
 @end

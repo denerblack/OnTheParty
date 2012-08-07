@@ -12,7 +12,8 @@
 @property (nonatomic, strong) UINib *cellNib;
 @end
 
-const NSString *URL = @"ontheparty.rtoledo.inf.br";
+//const NSString *URL = @"ontheparty.rtoledo.inf.br";
+const NSString *URL = @"192.168.2.102:3000";
 
 @implementation FirstViewController
 
@@ -79,14 +80,14 @@ const NSString *URL = @"ontheparty.rtoledo.inf.br";
                                                    name:[venueDict valueForKey:@"name"] 
                                                 contact:[venueDict valueForKey:@"contact"] 
                                                 address:[locationDict valueForKey:@"address"]
-                                               latitude:[[locationDict valueForKey:@"lat"] doubleValue] 
-                                              longitude:[[locationDict valueForKey:@"lng"] doubleValue] distance:[[locationDict valueForKey:@"distance"] doubleValue]/1000  
+                                               latitude:[locationDict valueForKey:@"lat"] 
+                                              longitude:[locationDict valueForKey:@"lng"] distance:[[locationDict valueForKey:@"distance"] doubleValue]/1000  
                                                 country:[venueDict valueForKey:@"country"] 
                                              categories:categories];
             [venues addObject:venue];
             CLLocationCoordinate2D coordinate;
-            coordinate.latitude = venue.latitude;
-            coordinate.longitude = venue.longitude;  
+            coordinate.latitude = [venue.latitude doubleValue];
+            coordinate.longitude = [venue.longitude doubleValue];
             VenuesAnnotation *vAnnotation = [[VenuesAnnotation alloc] initWithCoordinates:coordinate placeName:venue.name description:  venue.address];
             vAnnotation.tag = i;
             
@@ -151,22 +152,27 @@ const NSString *URL = @"ontheparty.rtoledo.inf.br";
 
 -(void)checkin:(Venue *)venue {
     
+    UIStoryboard *mainStoryBoard = self.storyboard;
+    VenueCheckinViewController *venueCheckinViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"CheckinController"];
+    [venueCheckinViewController setVenue:venue];
+    [self presentViewController:venueCheckinViewController animated:YES completion:nil];
+    
+//    AppDelegate *delegate = (AppDelegate*) [[UIApplication sharedApplication] delegate]; 
+//    [delegate.
+    
+//    VenueCheckinViewController *venueCheckinViewController = [[VenueCheckinViewController alloc] initWithNibName:@"VenueCheckinViewController" bundle:nil venue:venue];
+//    [mainStoryBoard instantiateViewControllerWithIdentifier:@"CheckinController"];
+//    [delegate.navigationController pushViewController:venueCheckinViewController animated:YES];   
 }
 
 -(void)findOrCreateVenues:(Venue*)venue {
-//    NSString *urlString = [NSString stringWithFormat:@"http://%@/api/venues/find_or_create/%@/%@/%@/%@/%@/%@/%@/%@",URL, venue.idFoursquare,venue.name,venue.contact,venue.address,[NSString stringWithFormat:@"%.12f",venue.latitude],[NSString stringWithFormat:@"%.12f",venue.longitude],venue.country,((Category*)[venue.categories objectAtIndex:0]).name];
-//    NSLog(@"%@",[urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]);
-//    NSURL *url = [NSURL URLWithString: [urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
-//    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    
     NSString *urlString = [NSString stringWithFormat:@"http://%@",URL];
     NSURL *url = [NSURL URLWithString: [urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
-//    NSURLRequest *request = [NSURLRequest requestWithURL:url];
     AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:url];
     
     NSDictionary* venueDict = [NSDictionary dictionaryWithObjectsAndKeys:venue.idFoursquare,@"id_foursquare", 
-                               [NSString stringWithFormat:@"%d", venue.latitude], @"latitude", 
-                               [NSString stringWithFormat:@"%d",venue.longitude],@"longitude",  
+                               [NSString stringWithFormat:@"%f", venue.latitude], @"latitude",
+                               [NSString stringWithFormat:@"%f",venue.longitude],@"longitude",  
                                venue.name,@"name",  nil];
     
     Category* category = [venue.categories objectAtIndex:0];
@@ -176,23 +182,15 @@ const NSString *URL = @"ontheparty.rtoledo.inf.br";
                                   category.iconPrefix,@"icon_prefix",  
                                   @"name", category.name, nil];
     NSDictionary* parametersDict = [NSDictionary dictionaryWithObjectsAndKeys:venueDict,@"venue",  categoryDict,@"category",  nil];
-    NSDictionary* foursquareParams = [NSDictionary dictionaryWithObjectsAndKeys:parametersDict,@"foursquare_params", nil];
-//    NSLog(@"%@",parametersDict);
-//    [httpClient postPath:@"/api/venues/find_or_create" parameters:foursquareParams success:
-//     ^(AFHTTPRequestOperation *operation, id responseObject) {
-//                 NSLog(@"%@",JSON);
-//     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-//          NSLog(@"Failed: %@",[error localizedDescription]);
-//     }];
-     
+    NSDictionary* foursquareParams = [NSDictionary dictionaryWithObjectsAndKeys:parametersDict,@"foursquare_params", nil];     
     NSURLRequest *request = [httpClient  requestWithMethod:@"POST" path:@"/api/venues/find_or_create" parameters:foursquareParams];
     
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+        NSDictionary *responseDict = [JSON valueForKeyPath:@"response"];
+        [venue setIdVenue:(NSInteger) [responseDict objectForKey:@"id"]];
         NSLog(@"%@",JSON);
+        [self checkin:venue];
 
-//        NSDictionary *responseDict = [JSON valueForKeyPath:@"response"];
-        
-//        [self setVenues: (NSArray*) [responseDict valueForKey:@"venues"]];
     } failure:^(NSURLRequest *request , NSURLResponse *response , NSError *error , id JSON){
         NSLog(@"Failed: %@",[error localizedDescription]);        
     }];

@@ -21,7 +21,7 @@
 @synthesize address;
 @synthesize idVenue;
 
--(id)initWithIdFoursquare:(NSString*) _idFoursquare name:(NSString*)_name contact:(NSString*)_contact latitude:(double)_latitude longitude:(double)_longitude country:(NSString*)_country categories:(NSArray*)_categories {
+-(id)initWithIdFoursquare:(NSString*) _idFoursquare name:(NSString*)_name contact:(NSString*)_contact latitude:(NSString*)_latitude longitude:(NSString*)_longitude country:(NSString*)_country categories:(NSArray*)_categories {
     
     if (self = [super init]) {
         self.idFoursquare = _idFoursquare;
@@ -36,7 +36,7 @@
     return self;
 }
 
--(Venue*)initWithIdFoursquare:(NSString*) _idFoursquare name:(NSString*)_name contact:(NSString*)_contact address:(NSString*)_address latitude:(double)_latitude longitude:(double)_longitude distance:(double)_distance country:(NSString*)_country categories:(NSArray*)_categories {
+-(Venue*)initWithIdFoursquare:(NSString*) _idFoursquare name:(NSString*)_name contact:(NSString*)_contact address:(NSString*)_address latitude:(NSString*)_latitude longitude:(NSString*)_longitude distance:(double)_distance country:(NSString*)_country categories:(NSArray*)_categories {
     
     if (self = [super init]) {
         self.idFoursquare = _idFoursquare;

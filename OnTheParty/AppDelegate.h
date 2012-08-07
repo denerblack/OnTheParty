@@ -7,9 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <FBiOSSDK/FacebookSDK.h>
+
+
+@class FacebookLoginViewController;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) FacebookLoginViewController *facebookLoginViewController;
+@property (strong, nonatomic) FBSession *session;
 
 @end

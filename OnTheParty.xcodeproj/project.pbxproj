@@ -30,8 +30,15 @@
 		279D04C11575CB4800390642 /* AFNetworking.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 279D04B21575CB4800390642 /* AFNetworking.podspec */; };
 		279D04C21575CB4800390642 /* AFNetworking.xcworkspace in Resources */ = {isa = PBXBuildFile; fileRef = 279D04B31575CB4800390642 /* AFNetworking.xcworkspace */; };
 		279D04C41575CF7000390642 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 279D04C31575CF7000390642 /* CoreLocation.framework */; };
+		27AB17CC15CB8380008BCEE9 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 27AB17CB15CB8380008BCEE9 /* User.m */; };
 		27B9435515B6562F00ADBBE5 /* VenueCheckinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27B9435315B6562F00ADBBE5 /* VenueCheckinViewController.m */; };
 		27B9435615B6562F00ADBBE5 /* VenueCheckinViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27B9435415B6562F00ADBBE5 /* VenueCheckinViewController.xib */; };
+		27C9B2D615C78A830064DD56 /* FBiOSSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27C9B2D515C78A830064DD56 /* FBiOSSDK.framework */; };
+		27C9B2D915C78A9E0064DD56 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27C9B2D815C78A9E0064DD56 /* Accounts.framework */; };
+		27C9B2DB15C78F4D0064DD56 /* FacebookConnectButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 27C9B2DA15C78F4D0064DD56 /* FacebookConnectButton.png */; };
+		27C9B2DF15C78F850064DD56 /* FacebookLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C9B2DD15C78F850064DD56 /* FacebookLoginViewController.m */; };
+		27C9B2E015C78F850064DD56 /* FacebookLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27C9B2DE15C78F850064DD56 /* FacebookLoginViewController.xib */; };
+		27C9B2E315C7974F0064DD56 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 27C9B2E215C7974F0064DD56 /* libsqlite3.dylib */; };
 		27D9B9011576FA14000C4E74 /* Venue.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D9B9001576FA14000C4E74 /* Venue.m */; };
 		27D9B9041576FFF7000C4E74 /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D9B9031576FFF7000C4E74 /* Category.m */; };
 		27D9B90715771906000C4E74 /* VenuesAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D9B90615771906000C4E74 /* VenuesAnnotation.m */; };
@@ -104,9 +111,18 @@
 		279D04B21575CB4800390642 /* AFNetworking.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = AFNetworking.podspec; path = OnTheParty/AFNetworking/AFNetworking.podspec; sourceTree = "<group>"; };
 		279D04B31575CB4800390642 /* AFNetworking.xcworkspace */ = {isa = PBXFileReference; lastKnownFileType = wrapper.workspace; name = AFNetworking.xcworkspace; path = OnTheParty/AFNetworking/AFNetworking.xcworkspace; sourceTree = "<group>"; };
 		279D04C31575CF7000390642 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		27AB17CA15CB8380008BCEE9 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		27AB17CB15CB8380008BCEE9 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		27B9435215B6562F00ADBBE5 /* VenueCheckinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueCheckinViewController.h; sourceTree = "<group>"; };
 		27B9435315B6562F00ADBBE5 /* VenueCheckinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueCheckinViewController.m; sourceTree = "<group>"; };
 		27B9435415B6562F00ADBBE5 /* VenueCheckinViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VenueCheckinViewController.xib; sourceTree = "<group>"; };
+		27C9B2D515C78A830064DD56 /* FBiOSSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBiOSSDK.framework; path = ../../Documents/FacebookSDK/FBiOSSDK.framework; sourceTree = "<group>"; };
+		27C9B2D815C78A9E0064DD56 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		27C9B2DA15C78F4D0064DD56 /* FacebookConnectButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FacebookConnectButton.png; sourceTree = "<group>"; };
+		27C9B2DC15C78F850064DD56 /* FacebookLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookLoginViewController.h; sourceTree = "<group>"; };
+		27C9B2DD15C78F850064DD56 /* FacebookLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookLoginViewController.m; sourceTree = "<group>"; };
+		27C9B2DE15C78F850064DD56 /* FacebookLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FacebookLoginViewController.xib; sourceTree = "<group>"; };
+		27C9B2E215C7974F0064DD56 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		27D9B8FF1576FA14000C4E74 /* Venue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Venue.h; sourceTree = "<group>"; };
 		27D9B9001576FA14000C4E74 /* Venue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Venue.m; sourceTree = "<group>"; };
 		27D9B9021576FFF7000C4E74 /* Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Category.h; sourceTree = "<group>"; };
@@ -147,6 +163,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27C9B2E315C7974F0064DD56 /* libsqlite3.dylib in Frameworks */,
+				27C9B2D915C78A9E0064DD56 /* Accounts.framework in Frameworks */,
+				27C9B2D615C78A830064DD56 /* FBiOSSDK.framework in Frameworks */,
 				27128874157C69B00031C7A1 /* QuartzCore.framework in Frameworks */,
 				27128872157C66D90031C7A1 /* OpenGLES.framework in Frameworks */,
 				279D04C41575CF7000390642 /* CoreLocation.framework in Frameworks */,
@@ -228,6 +247,16 @@
 			path = OnTheParty/AFNetworking/AFNetworking;
 			sourceTree = "<group>";
 		};
+		27C9B2E115C78F910064DD56 /* Facebook */ = {
+			isa = PBXGroup;
+			children = (
+				27C9B2DE15C78F850064DD56 /* FacebookLoginViewController.xib */,
+				27C9B2DD15C78F850064DD56 /* FacebookLoginViewController.m */,
+				27C9B2DC15C78F850064DD56 /* FacebookLoginViewController.h */,
+			);
+			name = Facebook;
+			sourceTree = "<group>";
+		};
 		27D9B8FD1576F9BA000C4E74 /* classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -237,6 +266,8 @@
 				27D9B9031576FFF7000C4E74 /* Category.m */,
 				27D9B90515771906000C4E74 /* VenuesAnnotation.h */,
 				27D9B90615771906000C4E74 /* VenuesAnnotation.m */,
+				27AB17CA15CB8380008BCEE9 /* User.h */,
+				27AB17CB15CB8380008BCEE9 /* User.m */,
 			);
 			name = classes;
 			sourceTree = "<group>";
@@ -244,7 +275,7 @@
 		27E9824915746C9700CB16A8 = {
 			isa = PBXGroup;
 			children = (
-				27128873157C69B00031C7A1 /* QuartzCore.framework */,
+				27C9B2E215C7974F0064DD56 /* libsqlite3.dylib */,
 				279D04981575CAEC00390642 /* AFNetworking */,
 				27E9825E15746C9900CB16A8 /* OnTheParty */,
 				27E9828A15746C9A00CB16A8 /* OnThePartyTests */,
@@ -265,6 +296,9 @@
 		27E9825715746C9900CB16A8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				27C9B2D815C78A9E0064DD56 /* Accounts.framework */,
+				27C9B2D515C78A830064DD56 /* FBiOSSDK.framework */,
+				27128873157C69B00031C7A1 /* QuartzCore.framework */,
 				27128871157C66D90031C7A1 /* OpenGLES.framework */,
 				279D04C31575CF7000390642 /* CoreLocation.framework */,
 				27E9829B157472C700CB16A8 /* MapKit.framework */,
@@ -279,6 +313,7 @@
 		27E9825E15746C9900CB16A8 /* OnTheParty */ = {
 			isa = PBXGroup;
 			children = (
+				27C9B2DA15C78F4D0064DD56 /* FacebookConnectButton.png */,
 				278E3A371578486B00125F46 /* venues */,
 				27D9B8FD1576F9BA000C4E74 /* classes */,
 				27E9826715746C9900CB16A8 /* AppDelegate.h */,
@@ -294,6 +329,7 @@
 				27E9827A15746C9A00CB16A8 /* second.png */,
 				27E9827C15746C9A00CB16A8 /* second@2x.png */,
 				27E9825F15746C9900CB16A8 /* Supporting Files */,
+				27C9B2E115C78F910064DD56 /* Facebook */,
 			);
 			path = OnTheParty;
 			sourceTree = "<group>";
@@ -415,6 +451,8 @@
 				2712886F157C5DFA0031C7A1 /* VenueDetailViewController.xib in Resources */,
 				27722C4215B503FC002FF07F /* categories.plist in Resources */,
 				27B9435615B6562F00ADBBE5 /* VenueCheckinViewController.xib in Resources */,
+				27C9B2DB15C78F4D0064DD56 /* FacebookConnectButton.png in Resources */,
+				27C9B2E015C78F850064DD56 /* FacebookLoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,6 +507,8 @@
 				278E3A3E1578494F00125F46 /* VenueCell.m in Sources */,
 				2712886E157C5DFA0031C7A1 /* VenueDetailViewController.m in Sources */,
 				27B9435515B6562F00ADBBE5 /* VenueCheckinViewController.m in Sources */,
+				27C9B2DF15C78F850064DD56 /* FacebookLoginViewController.m in Sources */,
+				27AB17CC15CB8380008BCEE9 /* User.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -577,6 +617,10 @@
 		27E9829615746C9B00CB16A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../Documents/FacebookSDK\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OnTheParty/OnTheParty-Prefix.pch";
 				INFOPLIST_FILE = "OnTheParty/OnTheParty-Info.plist";
@@ -588,6 +632,10 @@
 		27E9829715746C9B00CB16A8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../Documents/FacebookSDK\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OnTheParty/OnTheParty-Prefix.pch";
 				INFOPLIST_FILE = "OnTheParty/OnTheParty-Info.plist";

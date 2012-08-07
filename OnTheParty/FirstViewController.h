@@ -16,6 +16,7 @@
 #import "VenuesAnnotation.h"
 #import "VenueCell.h"
 #import "VenueCheckinViewController.h"
+#import "AppDelegate.h"
 
 @interface FirstViewController : UIViewController <CLLocationManagerDelegate,MKMapViewDelegate,UITableViewDelegate, UITableViewDataSource,VenueCellDelegate> {
     NSMutableArray *venues;
