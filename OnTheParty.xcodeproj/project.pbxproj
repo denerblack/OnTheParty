@@ -39,6 +39,7 @@
 		27C9B2DF15C78F850064DD56 /* FacebookLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27C9B2DD15C78F850064DD56 /* FacebookLoginViewController.m */; };
 		27C9B2E015C78F850064DD56 /* FacebookLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27C9B2DE15C78F850064DD56 /* FacebookLoginViewController.xib */; };
 		27C9B2E315C7974F0064DD56 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 27C9B2E215C7974F0064DD56 /* libsqlite3.dylib */; };
+		27D79F5415FAD16E0078E13A /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D79F5315FAD16D0078E13A /* MainTabBarController.m */; };
 		27D9B9011576FA14000C4E74 /* Venue.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D9B9001576FA14000C4E74 /* Venue.m */; };
 		27D9B9041576FFF7000C4E74 /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D9B9031576FFF7000C4E74 /* Category.m */; };
 		27D9B90715771906000C4E74 /* VenuesAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D9B90615771906000C4E74 /* VenuesAnnotation.m */; };
@@ -123,6 +124,8 @@
 		27C9B2DD15C78F850064DD56 /* FacebookLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookLoginViewController.m; sourceTree = "<group>"; };
 		27C9B2DE15C78F850064DD56 /* FacebookLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FacebookLoginViewController.xib; sourceTree = "<group>"; };
 		27C9B2E215C7974F0064DD56 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		27D79F5215FAD16D0078E13A /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
+		27D79F5315FAD16D0078E13A /* MainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
 		27D9B8FF1576FA14000C4E74 /* Venue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Venue.h; sourceTree = "<group>"; };
 		27D9B9001576FA14000C4E74 /* Venue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Venue.m; sourceTree = "<group>"; };
 		27D9B9021576FFF7000C4E74 /* Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Category.h; sourceTree = "<group>"; };
@@ -330,6 +333,8 @@
 				27E9827C15746C9A00CB16A8 /* second@2x.png */,
 				27E9825F15746C9900CB16A8 /* Supporting Files */,
 				27C9B2E115C78F910064DD56 /* Facebook */,
+				27D79F5215FAD16D0078E13A /* MainTabBarController.h */,
+				27D79F5315FAD16D0078E13A /* MainTabBarController.m */,
 			);
 			path = OnTheParty;
 			sourceTree = "<group>";
@@ -509,6 +514,7 @@
 				27B9435515B6562F00ADBBE5 /* VenueCheckinViewController.m in Sources */,
 				27C9B2DF15C78F850064DD56 /* FacebookLoginViewController.m in Sources */,
 				27AB17CC15CB8380008BCEE9 /* User.m in Sources */,
+				27D79F5415FAD16E0078E13A /* MainTabBarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

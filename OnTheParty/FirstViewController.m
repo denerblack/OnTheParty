@@ -28,6 +28,7 @@ const NSString *URL = @"192.168.2.102:3000";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     locationManager = [[CLLocationManager alloc] init];
     [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
     [locationManager setDelegate:self];
@@ -41,6 +42,18 @@ const NSString *URL = @"192.168.2.102:3000";
     
 	// Do any additional setup after loading the view, typically from a nib.
 }
+
+//-(void)viewWillAppear:(BOOL)animated {
+//    AppDelegate *delegate = (AppDelegate*) [[UIApplication sharedApplication] delegate];
+//    if (!delegate.session.isOpen) {
+//        //        self.facebookLoginViewController = [[FacebookLoginViewController alloc] initWithNibName:@"FacebookLoginViewController" bundle:nil];
+//        //        self.window.rootViewController = self.facebookLoginViewController;
+//        //        [self.window makeKeyAndVisible];
+//        UIStoryboard *mainStoryBoard = self.storyboard;
+//        FacebookLoginViewController *facebookLoginViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"FacebookLoginViewController"];
+//        [self presentViewController:facebookLoginViewController animated:YES completion:nil];
+//    }
+//}
 
 - (void)viewDidUnload
 {
@@ -171,8 +184,8 @@ const NSString *URL = @"192.168.2.102:3000";
     AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:url];
     
     NSDictionary* venueDict = [NSDictionary dictionaryWithObjectsAndKeys:venue.idFoursquare,@"id_foursquare", 
-                               [NSString stringWithFormat:@"%f", venue.latitude], @"latitude",
-                               [NSString stringWithFormat:@"%f",venue.longitude],@"longitude",  
+                               [NSString stringWithFormat:@"%@", venue.latitude], @"latitude",
+                               [NSString stringWithFormat:@"%@",venue.longitude],@"longitude",  
                                venue.name,@"name",  nil];
     
     Category* category = [venue.categories objectAtIndex:0];

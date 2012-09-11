@@ -7,6 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AFJSONRequestOperation.h"
+#import "AFHTTPClient.h"
+#import "FirstViewController.h"
 
 @interface FacebookLoginViewController : UIViewController
 

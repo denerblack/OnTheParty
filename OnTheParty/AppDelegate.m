@@ -16,18 +16,21 @@
 @synthesize facebookLoginViewController = _facebookLoginViewController;
 @synthesize session = _session;
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-    // Override point for customization after application launch.
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    if (!self.session.isOpen) {
-        self.facebookLoginViewController = [[FacebookLoginViewController alloc] initWithNibName:@"FacebookLoginViewController" bundle:nil];
-        self.window.rootViewController = self.facebookLoginViewController;
-        [self.window makeKeyAndVisible];
-    }
-    
-    return YES;
-}
+//- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+//{
+//    // Override point for customization after application launch.
+//    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+//    if (!self.session.isOpen) {
+////        self.facebookLoginViewController = [[FacebookLoginViewController alloc] initWithNibName:@"FacebookLoginViewController" bundle:nil];
+////        self.window.rootViewController = self.facebookLoginViewController;
+////        [self.window makeKeyAndVisible];
+//        UIStoryboard *mainStoryBoard = self.facebookLoginViewController.storyboard;
+//        self.facebookLoginViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"FacebookLoginViewController"];
+//        [self.window.rootViewController presentViewController:self.facebookLoginViewController animated:YES completion:nil];
+//    }
+//    
+//    return YES;
+//}
 
 -(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
     

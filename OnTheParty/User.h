@@ -10,11 +10,14 @@
 
 @interface User : NSObject
 
-@property (nonatomic) NSInteger idVenue;
+@property (nonatomic) NSInteger idUser;
 @property (nonatomic,retain) NSString *name;
 @property (nonatomic,retain) NSString *email;
+@property (nonatomic,retain) NSString *facebook;
+@property (nonatomic,retain) NSString *twitter;
+@property (nonatomic,retain) NSString *address;
 
 
--(User*)initWithId:(NSInteger)_idVenue name:(NSString*)_name email:(NSString*)_email;
+-(User*)initWithId:(NSInteger)_idUser name:(NSString*)_name email:(NSString*)_email facebook:(NSString*)_facebook twitter:(NSString*)_twitter address:(NSString*)_address;
 
 @end
